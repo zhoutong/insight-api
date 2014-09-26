@@ -123,7 +123,7 @@ if (peerSync) peerSync.allowReorgs = true;
 
 
 // socket.io
-var ios = require('socket.io')(server, config);
+var ios = require('socket.io').listen(server, config);
 require('./app/controllers/socket.js').init(ios);
 
 // plugins
