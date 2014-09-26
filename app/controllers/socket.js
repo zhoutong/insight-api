@@ -7,6 +7,7 @@ var logger = require('../../lib/logger').logger;
 
 module.exports.init = function(io_ext) {
   ios = io_ext;
+  ios.set('log level', 1); // reduce logging
   if (ios) {
     // when a new socket connects
     ios.sockets.on('connection', function(socket) {
